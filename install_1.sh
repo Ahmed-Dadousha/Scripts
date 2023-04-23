@@ -9,7 +9,8 @@ sudo apt update -y && sudo apt install nala -y
 printf "\n\e[34m%s\e[0m\n"  "============================================================================================== Install doas ==================================================================================" 
 # Setup Doas
 sudo apt install doas -y
-echo "permit persist ahmed as root" > /etc/doas.conf 
+TEXT="permit persist ahmed as root" 
+echo "$TEXT" | sudo tee -a /etc/doas.conf >/dev/null
 
 # Install snap store
 printf "\n\e[34m%s\e[0m\n"  "============================================================================================== Install Snap Store ==========================================================================="
