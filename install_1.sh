@@ -20,6 +20,13 @@ sudo apt-get install default-jdk python3 build-essential gcc g++ -y
 printf "\n\e[34m%s\e[0m\n"  "============================================================================================== Install Apps ================================================================================="
 sudo apt-get install timeshift htop tlp tlp-rdw gnome-tweaks neofetch gimp audacity kdenlive code vlc virtualbox vim tmux ncdu ffmpeg imagemagick cpufetch gdu bpytop speedtest-cli lolcat imwheel flatpak gnome-software-plugin-flatpak gnome-shell-extension-manager gir1.2-gmenu-3.0 gnome-screenshot plank doas preload gparted ncal youtube-dl -y
 
+#Install nala Package Manger
+printf "\n\e[34m%s\e[0m\n"  "============================================================================================== Install Nala package manger ==================================================================" 
+echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87015F3DA22D980
+sudo apt update && sudo apt install nala
+
+
 # Install Browser
 printf "\n\e[34m%s\e[0m\n" "============================================================================================== Download Google Chrome ======================================================================="
 cd ~/Downloads
