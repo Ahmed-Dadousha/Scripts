@@ -4,10 +4,10 @@
 aliases=$(cat << EOF
 # My Custom Aliases\n\
 alias cls=clear\n\
-alias i="sudo apt install -y"\n\
-alias q="sudo apt search "\n\
-alias r="sudo apt purge -y"\n\
-alias u="sudo apt update && sudo apt upgrade -y && flatpak update && sudo snap refresh && sudo apt autoremove -y && sudo apt autoclean -y && flatpak remove --unused -y"\n\
+alias i="doas nala install -y"\n\
+alias q="doas nala search "\n\
+alias r="doas nala purge -y"\n\
+alias u="doas nala update && sudo nala upgrade -y && flatpak update && sudo snap refresh && sudo nala autoremove -y && flatpak remove --unused -y"\n\
 alias ls="lsd -la"\n\
 \n
 EOF

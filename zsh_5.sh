@@ -2,11 +2,11 @@
 
 printf "\n\e[34m%s\e[0m\n" "================================================================================= Update The System ========================================================================================="
 # Update the system
-sudo apt update && sudo apt upgrade -y
+doas nala update && doas nala upgrade -y
 
 printf "\n\e[34m%s\e[0m\n" "================================================================================= Install Some Utilities ===================================================================================="
 # Install some utilities
-sudo apt install zsh ranger git wget -y
+doas nala install zsh ranger git wget -y
 mkdir -p ~/.config/zsh/plugins && mkdir -p ~/.cache/zsh
 echo -e '\n\n# zsh\nexport ZDOTDIR="$HOME/.config/zsh"' >> ~/.profile
 
@@ -14,7 +14,7 @@ printf "\n\e[34m%s\e[0m\n" "====================================================
 # Download font
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ./MesloLGS-NF
 # Install Fonts
-sudo mv MesloLGS-NF /usr/share/fonts
+doas mv MesloLGS-NF /usr/share/fonts
 
 printf "\n\e[34m%s\e[0m\n" "=========================================================================== Now Configure ZSH ================================================================================================"
 printf "\n\e[35m%s\e[0m\n" "####################################################################### Now change terminal font to [MesloLGS-NF] ###########################################################################"
@@ -36,11 +36,11 @@ echo -e '\n\n# ranger-cd\nfunction ranger-cd {\n    tempfile="$(mktemp -t tmp.XX
 printf "\n\e[34m%s\e[0m\n" "=============================================================================== Install lsd ================================================================================================="
 # Add lsd
 cd ~/Downloads
-wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb && sudo dpkg -i lsd_0.23.1_amd64.deb
+wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb && doas dpkg -i lsd_0.23.1_amd64.deb
 
 printf "\n\e[34m%s\e[0m\n" "=============================================================================== Change Default Shell ========================================================================================"
 # ZSH as the default shell
-sudo -s
+doas -s
 chsh -s /bin/zsh root
 
 chsh -s /bin/zsh $USER
