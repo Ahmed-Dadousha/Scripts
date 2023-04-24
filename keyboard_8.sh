@@ -2,21 +2,21 @@
 
 # Config SXHKD
 printf "\n==================================================================== Config SXHKD ==============================================================================================\n"
-mkdir ~/.config/sxhkd && touch ~/.config/sxhkd/sxhkdrc
+mkdir ~/.config/sxhkd ~/.config/autostart/sxhkd.desktop -p && touch ~/.config/sxhkd/sxhkdrc
 
 # Make sxhkd run on system startup
-TEXT="[Desktop Entry]
-Type=Application
-Exec=/usr/bin/sxhkd
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=Simple X Hot Key Demon
-Name=Simple X Hot Key Demon
-Comment[en_US]=Keybinding Process
-Comment=Keybinding Process"
+TEXT="[Desktop Entry]\n
+Type=Application\n
+Exec=/usr/bin/sxhkd\n
+Hidden=false\n
+NoDisplay=false\n
+X-GNOME-Autostart-enabled=true\n
+Name[en_US]=Simple X Hot Key Demon\n
+Name=Simple X Hot Key Demon\n
+Comment[en_US]=Keybinding Process\n
+Comment=Keybinding Process\n"
 
-echo $TEXT > ~/.config/autostart/sxhkd.desktop
+echo -e $TEXT > ~/.config/autostart/sxhkd.desktop
 
 # Add keyboard shortcuts
 # Terminal, Browser, Sound, Mount, File manger, Screenshot, Exit, Screencast
@@ -30,7 +30,7 @@ EOF
 
 )
 
-echo $shortcuts >> ~/.config/sxhkd/sxhkdrc
+echo -e $shortcuts >> ~/.config/sxhkd/sxhkdrc
 
 printf "\n================================================================================= Done =========================================================================================\n"
 
