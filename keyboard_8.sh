@@ -20,11 +20,18 @@ echo -e $TEXT > ~/.config/autostart/sxhkd.desktop
 
 # Add keyboard shortcuts
 # Terminal, Browser, Sound, Mount, File manger, Screenshot, Exit, Screencast
-
 shortcuts=$(cat << EOF
+# Open New Terminal
 ctrl + alt + t
-    "gnome-terminal"
-
+    gnome-terminal
+# Open Google CHhrome Browser
+super + b
+    google-chrome
+# Increase, Decrease, Toggle Sound
+super + {equal, minus, BackSpace}
+    $HOME/.scripts/volume_10.sh {up, down, toggle}
+# Run Visual Studio Code
+super + c
 
 EOF
 
