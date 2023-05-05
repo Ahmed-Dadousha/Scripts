@@ -48,8 +48,8 @@ Comment=A dock for launching applications\n
 
 EOF
 )
-
-echo -e $plank > ~/.config/autostart/plank.desktop
+doas touch ~/.config/autostart/plank.desktop
+doas echo -e $plank > ~/.config/autostart/plank.desktop
 plank &
 printf "\n\e[33m%s\e[0m\n" "================================================================================ Done  ====================================================================================================="
 
