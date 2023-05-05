@@ -7,7 +7,7 @@ alias cls=clear\n\
 alias i="doas nala install -y"\n\
 alias q="doas nala search "\n\
 alias r="doas nala purge -y"\n\
-alias u="doas nala update && sudo nala upgrade -y && flatpak update && sudo snap refresh && sudo nala autoremove -y && flatpak remove --unused -y"\n\
+alias u="doas nala update && doas nala upgrade -y && flatpak update && doas snap refresh && doas nala autoremove -y && flatpak remove --unused -y"\n\
 alias ls="lsd -la"\n\
 \n
 EOF
