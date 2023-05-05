@@ -14,8 +14,8 @@ git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 
 printf "\n\e[34m%s\e[0m\n" "================================================================================= Install Main theme  ======================================================================================"
 # Install Main Theme
-./WhiteSur-gtk-theme/install.sh -c Dark -c Light -i ubuntu -N mojave
-./WhiteSur-gtk-theme/tweaks.sh -f -d
+doas ./WhiteSur-gtk-theme/install.sh -c Dark -c Light -i ubuntu -N mojave
+doas ./WhiteSur-gtk-theme/tweaks.sh -f -d
 
 printf "\n\e[34m%s\e[0m\n" "=============================================================================== Download Icons theme  ======================================================================================"
 # Download Icons

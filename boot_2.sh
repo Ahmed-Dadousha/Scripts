@@ -2,7 +2,7 @@
 
 # Show boot loader
 printf "\n\e[34m%s\e[0m\n" "================================================================================================ Fixing Boot Loader ========================================================================"
-sudo echo "timeout 5" >> /boot/efi/loader/loader.conf
+doas echo "timeout 5" >> /boot/efi/loader/loader.conf
 
 # Add windows boot loader to grub
 
