@@ -30,7 +30,7 @@ doas nala install default-jdk python3 build-essential gcc g++ -y
 
 # Install Apps
 printf "\n\e[34m%s\e[0m\n"  "============================================================================================== Install Apps ================================================================================"
-doas nala install timeshift hollywood htop tlp tlp-rdw gnome-tweaks neofetch gimp audacity kdenlive code vlc virtualbox vim tmux ncdu ffmpeg imagemagick cpufetch gdu bpytop speedtest-cli lolcat imwheel flatpak gnome-software-plugin-flatpak gnome-shell-extension-manager gir1.2-gmenu-3.0 gnome-screenshot plank preload gparted ncal youtube-dl sxhkd maim xclip xdotool mpv sxiv clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev -y
+doas nala install timeshift hollywood htop tlp tlp-rdw gnome-tweaks neofetch gimp audacity kdenlive code vlc virtualbox vim tmux ncdu figlet ffmpeg imagemagick cpufetch gdu bpytop speedtest-cli lolcat imwheel flatpak gnome-software-plugin-flatpak gnome-shell-extension-manager gir1.2-gmenu-3.0 gnome-screenshot plank preload gparted ncal youtube-dl sxhkd maim xclip xdotool mpv sxiv clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev -y
 
 
 # Install Browser
